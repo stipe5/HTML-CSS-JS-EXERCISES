@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba9</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Ime: <span id="ime"></span></li>
+            <li>Prezime: <span id="prezime"></span></li>
+            <li>Godina rođenja: <span id="godina"></span></li>
+            <li>Visina u cm: <span id="visina"></span></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Ime: <span class="osoba"></span></li>
+            <li>Prezime: <span class="osoba"></span></li>
+            <li>Godina rođenja: <span class="osoba"></span></li>
+            <li>Visina u cm: <span class="osoba"></span></li>
+        </ul>
+    </div>
+    <script>
+        var auto = {
+            "marka": "Ford",
+            "boja": "Siva",
+            "godinaProizvodnje": "2003",
+            "prviVlasnik": true
+        };
+        var osoba = {
+            "ime": "Stjepan",
+            "prezime": "Goreta",
+            "godinaRođenja": 1998,
+            "visinaCm": 178
+        }
+        console.log(auto);
+        console.log(osoba);
+        document.getElementById("ime").innerHTML = osoba.ime;
+        document.getElementById("prezime").innerHTML = osoba.prezime;
+        document.getElementById("godina").innerHTML = osoba.godinaRođenja;
+        document.getElementById("visina").innerHTML = osoba.visinaCm;
+        var listaOsoba = document.getElementsByClassName("osoba");
+        var valuesOsoba = Object.values(osoba);
+        console.log(listaOsoba.length);
+        for (i = 0; i < listaOsoba.length; i++) {
+            listaOsoba[i].innerHTML = valuesOsoba[i];
+        }
+    </script>
+</body>
+</html>

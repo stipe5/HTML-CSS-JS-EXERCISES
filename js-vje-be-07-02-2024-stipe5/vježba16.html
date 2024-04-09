@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba16</title>
+</head>
+<body>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            let uspjeh = false;
+            if (uspjeh) {
+                resolve("operacija usješna!");
+            } else {
+                reject("Došlo je do greške.");
+            }
+        });
+        promise.then(result => {
+            console.log(result);
+        }).catch(error => {
+            console.error(error);
+        });
+    </script>
+</body>
+</html>

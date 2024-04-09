@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba5</title>
+</head>
+<body>
+    <h1>Države</h1>
+    <select name="drzava" id="drzava"></select>
+    <button onclick="dohvatiDrzave()">Napuni listu</button>
+
+
+  <!-- PREUZMITE LISTU DRŽAVA NA SVOJE RAČUNALO -->
+  <!-- https://github.com/achingachris/fetch-api-demo/blob/dev/countries.json -->
+
+
+  <!-- UZ POMOĆ FETCH DOHVATITE DRŽAVE I PRIKAŽITE IH U SVOM DOKUMENTU -->
+  <!-- https://chrisdevcode.hashnode.dev/how-to-display-json-on-an-html-page-using-vanilla-javascript -->
+
+  <script>
+    drzaveSelect = document.getElementById("drzava");
+    function dohvatiDrzave() {
+        fetch('https://raw.githubusercontent.com/achingachris/fetch-api-demo/dev/countries.json')
+        .then((res) => res.json())
+        .then((data) => {
+            var countryArray = [];
+            for (let i = 0; i < data.length; i++) {
+                countryArray.push(data[i].Country);
+            }
+            countryArray.sort();
+        for (i = 0; i < countryArray.length; i++) {
+        var newOption = document.createElement("option");
+        newOption.innerHTML = countryArray[i];
+        drzaveSelect.appendChild(newOption);
+
+      }
+    })
+    .catch((error) => {
+      console.log(`Error Fetching data : ${error}`)
+      document.getElementById('drzava').innerHTML = 'Error Loading Data'
+    })
+    }
+    /* NA NOVI DOKUMENT DODATI PRAZNU SELECT LISTU TE NJU POPUNITI SA DRŽAVAMA, NEKA SE LISTA NAPUNI KADA SE STISNE BUTTON, LISTU SORTIRAJTE ABECEDNO*/
+    
+  </script>
+</body>
+</html>

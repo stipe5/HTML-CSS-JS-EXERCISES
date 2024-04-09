@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vježba46</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Naziv</th>
+                <th>Vrsta</th>
+                <th>Godina rođenja</th>
+                <th>Slika</th>
+            </tr>
+        </thead>
+        <tbody id="myData"></tbody>
+    </table>
+    <script>
+        fetch(`pets.json`)
+            .then(function (response) {
+                console.log(response);
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                appendData(data);
+            })
+            .catch (function (err) {
+                console.log(err);
+            });
+
+        function appendData (data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                const newDiv = document.createElement("tr")
+                console.log(data[i]);
+                newDiv.innerHTML = `<td>${data[i].name}</td><td>${data[i].species}</td><td>${data[i].birthYear}</td><td><img src="${data[i].photo}" width="100px" height="100px"></td>`;
+
+                mainContainer.appendChild(newDiv);
+            }
+        }
+    </script>
+</body>
+</html>

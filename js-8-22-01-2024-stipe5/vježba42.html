@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba42</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        let arr = [1, 2, 3, 4, 6, 7, 8, 1, 5, 5, 6, 6, 7, 3, 12, 12, 34, 45, 45];
+
+        // Filtriranje niza kako bi se uklonili ponavljajući brojevi
+        let filtriraniNiz = arr.filter(function (value, index, self) {
+            return self.indexOf(value) === index;
+        });
+
+        // Pretvaranje filtriranog niza u string za prikaz u HTML-u
+        let rezultatHTML = filtriraniNiz.join(', ');
+
+        // Prikazivanje rezultata u HTML-u
+        document.getElementById('demo').innerHTML = rezultatHTML;
+    </script>
+</body>
+</html>

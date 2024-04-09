@@ -1,0 +1,13 @@
+.heading {
+    background-color: lavender;
+    padding: 10px;
+    border-radius: 4px;
+
+    &.green {
+        background-color: limegreen;
+    }
+
+    &.blue {
+        background-color: deepskyblue;
+    }
+}

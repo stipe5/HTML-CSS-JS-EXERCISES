@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+</head>
+<body>
+    <form action="hvala-vam.html" method="get">
+        <fieldset>
+            <legend>Vaše informacije</legend>
+            <p>
+                <label>Ime:
+                    <input type="text" name="imemusterije" placeholder="Ime" id="imemusterije" required>
+                </label>
+            </p>
+            <p>
+                <label>Email:
+                    <input type="email" name="email" placeholder="primjer@test.hr" id="email" required>
+                </label>
+            </p>
+            <p>
+                <label>Telefon:
+                    <input type="tel" name="tel" placeholder="0912523764" id="tel" required>
+                </label>
+            </p>
+            <p>
+                <label>Adresa:
+                    <input type="text" name="adresa" placeholder="Adresa" id="adresa" required>
+                </label>
+            </p>
+            <p>
+                <label for="instrukcije">Instrukcije za dostavu:</label> <br>
+                    <textarea name="instrukcije" id="instrukcije" placeholder="Možete unijeti najviše 400 znakova" rows="5" cols="40" maxlength="400"></textarea>
+            </p>
+        </fieldset>
+        <h1>Dizajnirajte svoju pizzu:</h1>
+        <fieldset>
+            <legend>Specifikacija</legend>
+            <fieldset>
+                <legend>Korica (Odaberite jednu)</legend> 
+                <label>Klasična
+                    <input type="radio" name="korica" value="klasicna" id="klasicna" checked>
+                </label> <br>
+                <label>Punjena šunkom
+                    <input type="radio" name="korica" value="punsunka" id="punsunka">
+                </label> <br>
+                <label>Punjena sirom
+                    <input type="radio" name="korica" value="punsir" id="punsir">
+                </label> <br>
+                <label>Bez glutena
+                    <input type="radio" name="korica" value="bezglutena" id="bezglutena">
+                </label> <br>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Dodaci:</legend>
+                <label>Rajčica
+                    <input type="checkbox" name="dodaci[]" value="rajcica" id="rajcica">
+                </label> <br>
+                <label>Šunka
+                    <input type="checkbox" name="dodaci[]" value="sunka" id="sunka">
+                </label> <br>
+                <label>Mozzarela
+                    <input type="checkbox" name="dodaci[]" value="mozzarela" id="mozzarela">
+                </label> <br>
+                <label>Pršut
+                    <input type="checkbox" name="dodaci[]" value="prsut" id="prsut">
+                </label> <br>
+                <label>Rikola
+                    <input type="checkbox" name="dodaci[]" value="rikola" id="rikola">
+                </label> <br>
+                <label>Vrhnje
+                    <input type="checkbox" name="dodaci[]" value="vrhnje" id="vrhnje">
+                </label> <br>
+            </fieldset>
+            <fieldset>
+                <legend>BROJ</legend>
+                <label>Koliko pizza naručujete:
+                    <select name="number">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </label>
+            </fieldset>
+        </fieldset>
+        <br>
+        <button type="submit">Donesite pizze!</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

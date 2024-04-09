@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba3</title>
+</head>
+<body>
+    <form action="Vježba3-hvala-vam.html" method="get">
+        <p>
+            <label>Ime i prezime:</label> <br>
+            <input type="text" name="imeprezime" placeholder="Unesite Ime i prezime">
+        </p>
+        <p>
+            <label>Email:</label> <br>
+            <input type="email" name="email" placeholder="Unesite email adresu">
+        </p> 
+        <p>
+            <label>OIB</label> <br>
+            <input type="number" name="oib" placeholder="Unesite svoj OIB">
+        </p>
+        <h2>Sladoled</h2>
+        <p>
+            <select name="sladoled" size="7" multiple>
+                <optgroup label="Tradicionalan">
+                    <option>Vanilija</option>
+                    <option>Čokolada</option>
+                </optgroup>
+                <optgroup label="Šljok">
+                    <option>Super praline</option>
+                    <option>Nut surprise</option>
+                    <option>Candy corn</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label>Broj gostiju
+            <input type="number"
+            name="guests"
+            min="1"
+            max="6">
+            </label>
+        </p>
+        <p>
+            <label>Zadovoljstvo (0 to 10)
+                <input
+                type="range"
+                name="zadovoljstvo"
+                min="0"
+                max="10"
+                step="1">
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Pošaljite">
+            <input type="reset" value="Poništite unos">
+        </p>
+    </form>
+</body>
+</html>

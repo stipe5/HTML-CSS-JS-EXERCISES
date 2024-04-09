@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba19</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var auto = {
+            "marka": "Ford",
+            "boja": "Siva",
+            "godinaProizvodnje": "2003",
+            "prviVlasnik": true
+        };
+        var txt = document.getElementById("demo");
+        for (let key in auto) {
+            txt.innerHTML += (auto[key]) + "<br>";
+        }
+    </script>
+</body>
+</html>

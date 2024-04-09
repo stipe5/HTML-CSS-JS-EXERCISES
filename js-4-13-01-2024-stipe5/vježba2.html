@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <div class="auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis quos repellendus sint laboriosam tenetur quia, omnis, totam, ipsam pariatur eaque perferendis explicabo? Quibusdam rem enim culpa, molestiae dolor tempore non similique sequi. Minima magni molestias, corporis blanditiis unde recusandae ullam, cupiditate quas natus necessitatibus dolore impedit sunt, nam optio excepturi aliquam? Qui totam recusandae voluptatem eos esse architecto optio adipisci ullam numquam similique! Fugiat laboriosam iste exercitationem blanditiis nobis voluptatibus culpa et eveniet harum dignissimos aliquam porro distinctio, eos molestiae suscipit mollitia dolores aspernatur? Nulla minus ipsa, fuga cumque sit odio maiores ipsum magnam rem atque quidem repellendus sint.</div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam explicabo aspernatur aut provident amet in, eos dignissimos laboriosam, necessitatibus cum rem dolore alias nisi at? Animi minima sit repellendus id ipsum pariatur, rem at nisi magni accusantium rerum ea maxime enim. Assumenda consequatur quis, debitis obcaecati dolores aut itaque repudiandae!</div>
+    <div class="auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore earum ducimus amet sapiente nesciunt accusamus aliquid excepturi maxime, dignissimos aut laudantium ut omnis, aperiam corporis totam facilis deleniti accusantium sed sit pariatur nulla maiores porro similique. Magnam eius expedita velit neque? Eaque aspernatur consequuntur dolores. Impedit nulla nobis officia distinctio nam iure quidem blanditiis modi sapiente ipsa exercitationem laboriosam iste possimus officiis accusantium, itaque rem consequatur, non neque! Unde, non consequuntur? Numquam accusantium accusamus molestiae esse harum minus quidem ab rerum eum? Eveniet maxime accusantium ipsam temporibus ad vel excepturi, unde nisi minus vero illum nobis aliquam, quos beatae repellendus.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, assumenda eos. Omnis natus molestias dicta? In reprehenderit, corrupti sapiente necessitatibus commodi minus, doloremque aperiam soluta impedit beatae eos. Saepe, facilis asperiores tempora repudiandae non deserunt ipsa illo quaerat esse magnam natus iste, quia voluptas officiis quos labore optio et reiciendis?</div>
+    <div class="auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quis nemo accusamus impedit! Sed voluptates ad quaerat libero praesentium sunt veniam facere rerum illum hic at iste eveniet, rem, facilis, totam perspiciatis possimus recusandae! Temporibus quam eveniet, cupiditate enim ipsum laborum ad, repellendus itaque reprehenderit nulla aliquid nostrum esse dolorem quaerat. Explicabo, possimus! Minima ipsam quis doloribus amet nobis sequi, ad cumque sit illo aperiam optio doloremque delectus cupiditate, soluta nihil? Reiciendis, quas? Ad neque id fuga reiciendis libero repellat corrupti saepe similique nemo incidunt dolor soluta explicabo unde a hic quam repudiandae rerum ipsa, laudantium laborum ab recusandae atque?</div>
+    <button id="painter">Bojaj</button>
+    <script>
+        var auti = document.getElementsByClassName("auto");
+        function paint() {
+            for (var i = 0; i < auti.length; i++) {
+                if (auti[i].style.color != "red") {
+                    auti[i].style.color = "red";
+                }
+                else {
+                    auti[i].style.color = "initial";
+                }
+            }
+        }
+        document.getElementById("painter").addEventListener("click", paint);
+    </script>
+</body>
+</html>

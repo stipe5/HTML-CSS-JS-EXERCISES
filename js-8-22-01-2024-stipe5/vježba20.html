@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba20</title>
+</head>
+<body>
+    <script>
+        var result = document.getElementById("demo");
+        let employees = [
+            {name: "John", salary: 90000, hireDate: "July 1, 2010"},
+            {name: "David", salary: 75000, hireDate: "August 15, 2009"},
+            {name: "Ana", salary: 80000, hireDate: "December 12, 2011"}
+        ];
+        employees.sort(function (x, y) {
+            return x.salary - y.salary;
+        });
+        console.table(employees);
+    </script>
+</body>
+</html>

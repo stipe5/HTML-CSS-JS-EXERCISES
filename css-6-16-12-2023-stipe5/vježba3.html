@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            margin: 100px;
+            width: 600px;
+            height: 600px;
+            border: solid 2px black;
+            position: relative;
+            overflow: hidden;
+        }
+        .box div {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            background-color: red;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+        }
+        :is(.box:hover) div {
+            left: 0%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba3</title>
+</head>
+<body>
+    <div class="box">
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>

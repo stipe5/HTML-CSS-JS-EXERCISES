@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            padding: 5%;
+        }
+        div {
+            transition: all 1s linear;
+        }
+        .glavni {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px;
+            padding: 50px;
+            background-color: aliceblue;
+            height: 400px;
+            min-width: 600px;
+            position: relative;
+        }
+        .prvi {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            background-color: brown;
+        }
+        .drugi {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            background-color: orange;
+        }
+        .treci {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            background-color: pink;
+        }
+        .cetvrti {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            background-color: fuchsia;
+        }
+        :is(.glavni:hover) .prvi {
+            left: calc(100% - 50px);
+        }
+        :is(.glavni:hover) .drugi {
+            right: calc(100% - 50px);
+        }
+        :is(.glavni:hover) .treci {
+            bottom: calc(100% - 50px);
+        }
+        :is(.glavni:hover) .cetvrti {
+            top: calc(100% - 50px);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba4</title>
+</head>
+<body>
+    <div class="glavni">
+        <div class="prvi"></div>
+        <div class="drugi"></div>
+        <div class="treci"></div>
+        <div class="cetvrti"></div>
+    </div>
+</body>
+</html>

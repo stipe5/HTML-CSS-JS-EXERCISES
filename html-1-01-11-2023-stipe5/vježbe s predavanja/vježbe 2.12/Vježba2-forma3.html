@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <h1>Kontrole forme</h1>
+    <form>
+        <h2>Boje</h2>
+        <p>
+            <input type="radio" id="crna">
+            <label for="crna">Crna</label> 
+            <input type="radio" id="plava">
+            <label for="plava">Plava</label> 
+            <input type="radio" id="crvena">
+            <label for="crvena">Crvena</label> 
+        </p>
+        <h2>Proizvodi</h2>
+        <p>
+            <input type="checkbox" id="iphone">
+            <label for="iphone">Iphone</label> 
+            <input type="checkbox" id="macbook">
+            <label for="macbook">MacBook</label> 
+            <input type="checkbox" id="ipod">
+            <label for="ipod">Ipod</label> 
+        </p>
+        <h2>Auti</h2>
+        <p>
+            <label for="auti">Odaberite auto:</label>
+            <select id="auti" name="auti" required>
+                <option value="" disabled selected>Odaberite auto</option>
+                <option value="volvo">Volvo</option>
+                <option value="audi">Audi</option>
+                <option value="vw">VW</option>
+                <option value="honda">Honda</option>
+                <option value="subaru">Subaru</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Pošalji unos">
+        </p>
+    </form>
+</body>
+</html>

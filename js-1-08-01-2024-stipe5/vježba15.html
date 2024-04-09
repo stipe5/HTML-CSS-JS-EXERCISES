@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba15</title>
+</head>
+<body>
+    <div id="osoba"></div>
+    <script>
+        let osoba = prompt("Molim vas unesite svoje ime");
+        console.log(osoba);
+        if (osoba == "" || osoba == null) {
+            document.getElementById("osoba").innerHTML = "Ovdje nema nikoga :(";
+        } else {
+            document.getElementById("osoba").innerHTML = "Pozdrav " + osoba + ". Kako ste nam danas?";
+        }
+    </script>
+</body>
+</html>

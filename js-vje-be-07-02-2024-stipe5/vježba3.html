@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba3</title>
+</head>
+<body>
+    <form onsubmit="event.preventDefault();konverzija()">
+        <h1>Konverter (Kune u eure)</h1>
+        <p>Unesite vrijednost u eurima:</p>
+        <label>Kune:</label>
+        <input type="number" step=".1">
+        <p>Dobili ste: <span id="result"></span> eura</p>
+    </form>
+    <script>
+        $("input").change(function() {
+            konverzija();
+        });
+
+        function konverzija() {
+            var kune = $("input").val();
+            eur = kune / 7.5345;
+            eur = eur.toFixed(2);
+            document.getElementById("result").innerHTML = eur;
+        }
+    </script>
+</body>
+</html>

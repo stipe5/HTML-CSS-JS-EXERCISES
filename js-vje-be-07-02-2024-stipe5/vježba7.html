@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba7</title>
+</head>
+<body>
+    <ul id="unsorted">
+        <li>Call Mom</li>
+        <li>Finish Assignment</li>
+        <li>Visit my Grandparents</li>
+        <li>Write New Article</li>
+        <li>Read a book</li>
+        <li>Check Comments</li>
+    </ul>
+    <div id="newElements"></div>
+    <script>
+        const heading1 = document.createElement("h1");
+        heading1.innerHTML = "Create New Elements and Add New Text Content";
+        const heading2 = document.createElement("h2");
+        heading2.innerHTML = "New Heading 2 <i>Element</i>"
+        var ubaciDiv = document.getElementById("newElements");
+        ubaciDiv.appendChild(heading1);
+        ubaciDiv.insertBefore(heading2, heading1);
+        var li = document.getElementById("unsorted");
+        var liElements = li.getElementsByTagName("li");
+        var newLi = document.createElement("li");
+        newLi.innerHTML = "Watch a Movie";
+        li.replaceChild(newLi, liElements[4]);
+    </script>
+</body>
+</html>

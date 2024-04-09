@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba41</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age(x) {
+                return x - this.year;
+            }
+        }
+
+        let date = new Date();
+        let year = date.getFullYear();
+
+        let myCar = new Car("Ford", 2014);
+        document.getElementById("demo").innerHTML = `Moj auto je ${myCar.age(year)} godina star.`;
+    </script>
+</body>
+</html>

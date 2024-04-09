@@ -1,0 +1,6 @@
+h1, h2, h3 {
+    background: linear-gradient(90deg, black, blue);
+    padding:2rem;
+    margin-bottom: 1rem;
+    border-bottom: dotted 3px black;
+}

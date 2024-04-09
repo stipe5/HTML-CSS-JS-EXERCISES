@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba35</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var cijena = parseFloat(prompt("Unesite cijenu:"));
+        var popust = parseInt(prompt("unesite popust:"));
+        var akcija;
+        var novacijena = cijena * ((100-popust) / 100);
+        if (popust > 50) {
+            akcija = "Super akcija";
+        } else if (popust >= 30) {
+            akcija = "Odlična akcija";
+        } else {
+            akcija = "AKCIJA";
+        }
+        document.getElementById("demo").innerHTML = `${akcija} - nova cijena: ${novacijena.toFixed(2)}`;
+    </script>
+</body>
+</html>

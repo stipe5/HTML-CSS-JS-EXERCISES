@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nizovi</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var result = document.getElementById("demo");
+        var imena = ["Mate", "Stipe", "Marko", "Ivan"];
+        function ispisImena(arr) {
+            for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+            result.innerHTML += i+1 + ". " + arr[i] + "<br>";
+        }
+        }
+        ispisImena(imena);
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        header {
+            background-color: white;
+            display: flex;
+            padding: 2em;
+            box-shadow: inset 0px 0px 4px 2px  gray;
+            float: left;
+            justify-content: center;
+        }
+        .slika {
+            display: flex;
+            float: left;
+        }
+        .lista img {
+            size: contain;
+        }
+        .lista {
+            max-width: 900px;
+            display: inline-block;
+        }
+        .lista ul {
+            padding: 20px;
+            list-style-type: none;
+            margin-left: 250px;
+        }
+        .lista ul li {
+            display: inline-block;
+        }
+       .lista ul li:not(:last-child) {
+        margin-right: 10px;
+        border-radius: 10px;
+        background-color: lightgray;
+       }
+       .lista ul li a {
+        display: block;
+        padding: 5px;
+        color: gray;
+        text-decoration: none;
+       }
+       .lista ul li a:hover {
+        background-color: blue;
+        color: white;
+        border-radius: 10px;
+       }
+       section {
+        height: calc(100vh - 175px);
+        background-image: url(images/main-cover.webp);
+        background-size: cover;
+        background-position: center;
+       }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba5</title>
+</head>
+<body>
+    <header>
+        <div class="slika"><img src="images/reem_logo_simple_croped.png" alt="logo"></div>
+        <div class="lista">
+            <ul>
+                <li><a href="#">Naslovna</a></li>
+                <li><a href="#">O nama</a></li>
+                <li><a href="#">Aktualno</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+    <section></section>
+</body>
+</html>

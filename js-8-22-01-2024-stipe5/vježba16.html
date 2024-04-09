@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba16</title>
+</head>
+<body>
+    <div id="mojGraf" style="width: 100%; max-width: 600px; height: 500px;"></div>
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Zemlja', 'Litara u mil'],
+                ['Francuska',49],
+                ['Španjolska', 44],
+                ['USA',24],
+                ['Argentina',15]
+            ]);
+
+            var options = {
+                title:'Proizvodnja vina'
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById("mojGraf"));
+            chart.draw(data, options);
+        }
+    </script>
+</body>
+</html>

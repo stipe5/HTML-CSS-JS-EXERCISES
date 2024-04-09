@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba3</title>
+</head>
+<body>
+    <button onclick="prvi()" id="prvi">Mačka</button>
+    <button onmouseover="drugi()" id="drugi">55</button>
+    <script>
+        var prvibutt = document.getElementById("prvi");
+        var drugibutt = document.getElementById("drugi");
+        console.log(prvibutt.innerHTML);
+        function prvi() {
+            if (prvibutt.innerHTML == "Mačka") {
+                prvibutt.innerHTML = "Pas";
+            } else {
+                prvibutt.innerHTML = "Mačka";
+            }   
+        }
+        function drugi() {
+            if (drugibutt.innerHTML == "55") {
+                drugibutt.innerHTML = "25";
+            } else {
+                drugibutt.innerHTML = "55";
+            }   
+        }
+    </script>
+</body>
+</html>

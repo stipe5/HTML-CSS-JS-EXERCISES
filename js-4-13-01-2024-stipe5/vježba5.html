@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        #small {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+        #container {
+            background-color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 3em;
+            flex-direction: row;
+            border: 2px solid black;
+            border-radius: 5px;
+            z-index: 2;
+        }
+        #container button {
+            align-self: flex-start;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba5</title>
+</head>
+<body>
+    <img src="https://m.media-amazon.com/images/I/61IIbwz-+ML._AC_SX679_.jpg" alt="ryzen" width="200px" height="200px" id="small" onclick="popup()">
+    <div id="container">
+        <img src="https://m.media-amazon.com/images/I/61IIbwz-+ML._AC_SX679_.jpg" alt="ryzen" width="800px" height="600px" id="big">
+        <button type="button" id="close">X</button>
+    </div>
+    <script>
+        var smallImage = document.getElementById("small");
+        var bigImage = document.getElementById("container");
+        document.getElementById("close").addEventListener("click", close);
+        function popup() {
+            bigImage.style.display = `flex`;
+        }
+        function close() {
+            bigImage.style.display = `none`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba28</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var unos = parseInt(prompt("Unesite broj: "));
+        var ispis = document.getElementById("demo");
+        function getlength (a) {
+            return a.toString().length;
+        }
+        var duljina = getlength(unos);
+        console.log(duljina);
+        if (duljina == 2) {
+            ispis.innerHTML = "Broj je dvoznamenkast";
+        } else {
+            ispis.innerHTML = "Broj nije dvoznamenkast";
+        }
+    </script>
+</body>
+</html>

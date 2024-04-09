@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba8</title>
+</head>
+<body>
+    <h1>Moja lista</h1>
+
+    <select name="" id="listaSImenima">
+        <option value="Prazno je :(, Pošaljite mi neka imena">Prazno je :(, Pošaljite mi neka imena</option>
+    </select>
+
+    <form id="mojaForma">
+        <input type="text" id="ime">
+        <button onclick="posaljiImeUListu()" type="submit">Pošalji ime</button>
+    </form>
+
+    <script>
+        let select = document.getElementById("listaSImenima");
+        function posaljiImeUListu() {
+            event.preventDefault();
+            var ime = document.getElementById("ime").value;
+            var newOption = document.createElement("option");
+            newOption.innerHTML = ime;
+            select.appendChild(newOption);
+            select.value = ime;
+        }
+    </script>
+</body>
+</html>

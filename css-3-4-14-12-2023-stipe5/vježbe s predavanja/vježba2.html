@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+        section {
+            height: 100vh;
+            width: 100vw;
+        }
+        div {
+            height: 100%;
+            width: 25%;
+            display:inline-flex;
+            float: left;
+            align-items: flex-end;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #fireworks {
+            background-image: url(images/fireworks.jpg); 
+        }
+        #kayak {
+            background-image: url(images/kayak.jpg);
+        }
+        #gastro {
+            background-image: url(images/gastro.jpg);
+        }
+        #restaurant {
+            background-image: url(images/restaurant.jpg);
+        }
+        div button {
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            background-color: #EEF234;
+            color: #1C3192;
+        }
+        div button:hover {
+            filter: brightness(90%);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <section>
+        <div id="fireworks">
+            <button>KALENDAR DOGAĐANJA</button>
+        </div>
+        <div id="kayak">
+            <button>AKTIVNI TURIZAM</button>
+        </div>
+        <div id="gastro">
+            <button>GASTRONOMIJA</button>
+        </div>
+        <div id="restaurant">
+            <button>SMJEŠTAJ</button>
+        </div>
+    </section>
+</body>
+</html>

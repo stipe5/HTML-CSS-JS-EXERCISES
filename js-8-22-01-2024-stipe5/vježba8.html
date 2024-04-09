@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba8</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var a = parseInt(prompt("Unesite 1. broj:"));
+        var b = parseInt(prompt("Unesite 2. broj:"));
+        var c = parseInt(prompt("Unesite 3. broj:"));
+        var d = parseInt(prompt("Unesite 4. broj:"));
+        var holder =[a, b, c, d];
+        var suma_pozitivnih = 0;
+        var suma_negativnih = 0;
+        for (let i = 0; i < holder.length; i++) {
+            if (Math.sign(holder[i]) == 1) {
+                suma_pozitivnih += holder[i];
+            } else {
+                suma_negativnih += holder[i];
+            }
+            document.getElementById("demo").innerHTML = `Zbroj pozitivnih brojeva: ${suma_pozitivnih}<br>Zbroj negativnih brojeva: ${suma_negativnih}`;
+        }
+    </script>
+</body>
+</html>

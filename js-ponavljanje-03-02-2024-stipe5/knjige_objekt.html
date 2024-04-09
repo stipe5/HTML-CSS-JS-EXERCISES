@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekt_knjige</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var display = document.getElementById("demo");
+        var knjiga = {
+            naslov: "Zločin i kazna",
+            autor: "Fjodor Mihajlovič Dostojevski",
+            godinaizdanja: "1866"
+        }
+        function ispisKnjiga(book) {
+            display.innerHTML = `Naslov: ${book.naslov}<br>Autor: ${book.autor}<br>Godina: ${book.godinaizdanja}`;
+        }
+        ispisKnjiga(knjiga);
+    </script>
+</body>
+</html>

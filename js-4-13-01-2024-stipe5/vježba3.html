@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba3</title>
+</head>
+<body>
+    <ul>
+        <li>jedan</li>
+        <li>dva</li>
+        <li>tri</li>
+        <li>cetiri</li>
+    </ul>
+    <ol>
+        <li>prvi</li>
+        <li>drugi</li>
+        <li>treci</li>
+        <li>cetvrti</li>
+    </ol>
+    <button id="painter">bojaj</button>
+    <script>
+        var ordered = document.querySelectorAll("ol li");
+        var unordered = document.querySelectorAll("ul li");
+        function paint() {
+            for (var i = 0; i < ordered.length; i++) {
+            ordered[i].style.color = "green";
+            unordered[i].style.color = "red";
+            }
+        }
+        document.getElementById("painter").addEventListener("click", paint);
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            width: 95vw;
+            height: 95vh;
+            margin: 0 auto;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            margin: 5px;
+            row-gap: 5px;
+        }
+        .crvenibox, .zelenibox, .plavibox, .sivibox {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+        .crvenibox div {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+        }
+        .zelenibox div {
+            background-color: greenyellow;
+            width: 100%;
+            height: 100%;
+        }
+        .plavibox div {
+            background-color: blue;
+            width: 100%;
+            height: 100%;
+        }
+        .sivibox div {
+            background-color: lightgrey;
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (max-width: 320px) {
+            .crvenibox, .zelenibox, .plavibox, .sivibox {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+        } 
+        }
+        @media screen and (min-width: 321px) and (max-width: 768px) {
+            .sivibox {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .sivibox div {
+                flex: 0 1 49%;
+            }
+            .crvenibox, .zelenibox, .plavibox {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+        } 
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <div class="container">
+        <div class="crvenibox">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="zelenibox">
+            <div></div>
+        </div>
+        <div class="plavibox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sivibox">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

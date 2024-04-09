@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba39</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        let x = this;
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo").innerHTML = person.fullName();
+        document.getElementById("demo2").innerHTML = x;
+        let myFunction = (a, b) => a * b;
+        document.getElementById("demo3").innerHTML = myFunction(4,5);
+        class Auto {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const myCar = new Auto("Ford", 2014);
+        document.getElementById("demo4").innerHTML = myCar.name + " " + myCar.year;
+    </script>
+</body>
+</html>

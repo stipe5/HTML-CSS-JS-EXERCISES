@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba26</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var unos = prompt("Unesite broj:" );
+        var ispis = document.getElementById("demo");
+        console.log(unos);
+        if (isNaN(unos) || unos == null) {
+            ispis.innerHTML = "Niste unijeli broj."
+        } else {
+            unos = parseInt(unos);
+            if (unos % 2 == 0) {
+                ispis.innerHTML += `Broj ${unos} je djeljiv s 2 <br>`;
+            } else {
+                ispis.innerHTML += `Broj ${unos} nije djeljiv s 2 <br>`;
+            }
+            if (unos % 3 == 0) {
+                ispis.innerHTML += `Broj ${unos} je djeljiv s 3 <br>`;
+            } else {
+                ispis.innerHTML += `Broj ${unos} nije djeljiv s 3 <br>`;
+            }
+            if (unos % 5 == 0) {
+                ispis.innerHTML += `Broj ${unos} je djeljiv s 5 <br>`;
+            } else {
+                ispis.innerHTML += `Broj ${unos} nije djeljiv s 5 <br>`;
+            }
+            if (unos % 7 == 0) {
+                ispis.innerHTML += `Broj ${unos} je djeljiv s 7 <br>`;
+            } else {
+                ispis.innerHTML += `Broj ${unos} nije djeljiv s 7 <br>`;
+            }
+        }
+    </script>
+</body>
+</html>

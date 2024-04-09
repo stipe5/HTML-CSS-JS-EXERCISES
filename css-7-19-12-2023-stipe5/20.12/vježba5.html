@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            padding-left: 10px;
+            color: white;
+            display: inline-block;
+            background-color: gray;
+        }
+        main {
+            display: flex;
+        }
+        main h2 {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        main p {
+            padding: 10px
+        }
+        article {
+            background-color: red;
+            flex: 1 1 50%;
+            order: 2;
+        }
+        #news {
+            background-color: yellow;
+            flex: 1 1 25%;
+            order: 3;
+        }
+        #contact {
+            background-color: orange;
+            flex: 1 1 25%;
+            order: 1;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba5</title>
+</head>
+<body>
+    <header><h1>Headline</h1></header>
+    <main>
+        <section id="news"><h2>News</h2></section>
+        <article>
+            <h2>Naslov</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nesciunt itaque repudiandae ipsa nostrum soluta animi, voluptatum sapiente consequuntur magnam ducimus perferendis dolor, rem nam quae, eligendi accusamus aliquid delectus quidem fuga voluptas voluptate error. Ipsam quisquam natus provident doloremque deserunt temporibus quia laborum aspernatur obcaecati atque debitis voluptatibus quo nihil, voluptas delectus vero ratione. Nemo dolorem iure minus eum numquam optio dignissimos illo temporibus? Distinctio magni, veniam exercitationem maxime doloremque adipisci dolore commodi beatae blanditiis deserunt animi sed, laborum eius tempore inventore quo sequi cumque optio ab voluptas modi earum nemo! Incidunt alias eaque ipsum a ullam dolore assumenda.</p>
+        </article>
+        <section id="contact"><h2>Contact</h2></section>
+    </main>
+    <footer><p>the small print</p></footer>
+</body>
+</html>

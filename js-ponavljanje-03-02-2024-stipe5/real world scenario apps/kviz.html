@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kviz</title>
+</head>
+<body>
+    <div id="kviz"></div>
+    <button onclick="provjeriOdgovor()">Pošalji</button>
+    <div id="rezultat"></div>
+    <script>
+        var kvizPitanja = [
+            {
+                pitanje: "Koliko je 2+2?",
+                odgovori: {
+                    a: "5",
+                    b: "6",
+                    c: "4"
+                },
+                tocanOdgovor: "c"
+            },
+            {
+                pitanje: "Koja je trenutno godina?",
+                odgovori: {
+                    a: "2021",
+                    b: "2024",
+                    c: "2023"
+                },
+                tocanOdgovor: "b"
+            },
+            {
+                pitanje: "Koji bend izvodi pjesmu Hotel California?",
+                odgovori: {
+                    a: "The Eagles",
+                    b: "The Hawks",
+                    c: "The Pidgeons"
+                },
+                tocanOdgovor: "a"
+            },
+            {
+                pitanje: "Megapopularna igra CS ili?",
+                odgovori: {
+                    a: "Counter-Strike",
+                    b: "Cat-Song",
+                    c: "Kanter"
+                },
+                tocanOdgovor: "a"
+            },
+        ]
+            console.log(kvizPitanja[0].pitanje);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        #clock {
+            background-color: beige;
+            width: 300px;
+            height: 100px;
+            padding: 25px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-family: 'Permanent Marker', cursive;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba15</title>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        var clock = document.getElementById("clock");
+        var pmam;
+        function prikaz() {
+            var vrijeme = new Date();
+            var prikaziVrijeme = [vrijeme, vrijeme.getHours(), vrijeme.getMinutes(), vrijeme.getSeconds()];
+            if (prikaziVrijeme[1] > 12) {
+                prikaziVrijeme[1] -= 12;
+                pmam = "PM";
+            } else {
+                pmam = "AM";
+            }
+            prikaziVrijeme[1] = prikaziVrijeme[1].toString().padStart(2, 0);
+            prikaziVrijeme[2] = prikaziVrijeme[2].toString().padStart(2, 0);
+            prikaziVrijeme[3] = prikaziVrijeme[3].toString().padStart(2, 0);
+            clock.innerHTML = `${prikaziVrijeme[1]}:${prikaziVrijeme[2]}:${prikaziVrijeme[3]} ${pmam}`;
+        }
+        prikaz();
+        setInterval(prikaz, 1000);
+
+        
+    </script>
+</body>
+</html>

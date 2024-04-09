@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba36</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var unos = +prompt("Unesite broj:");
+        var ispis = document.getElementById("demo");
+        ispis.innerHTML += `Uneseni broj: ${unos}<br>`;
+        unos = Math.round(unos);
+        ispis.innerHTML += `Novi broj: ${unos}`;
+    </script>
+</body>
+</html>

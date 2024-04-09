@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba37</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var number = Number(prompt("unesite broj manji od 25:"));
+        var result = document.getElementById("demo");
+        switch (number) {
+            case visekratnik5(number):
+                result.innerHTML = number;
+                break;
+            case outofBounds(number):
+                result.innerHTML = "Unesen je pogrešan broj";
+                break;
+            default:
+                result.innerHTML = "Broj nije višekratnik broja 5";
+        }
+
+        function visekratnik5(num) {
+            if (num % 5 == 0) {
+                console.log("true");
+                return true;
+            }
+            else {
+                console.log("false")
+                return false;
+            }
+        }
+        function outofBounds(num) {
+            if (num < 0 || num > 25) {return true;}
+            else {return false;};
+        }
+    </script>
+</body>
+</html>

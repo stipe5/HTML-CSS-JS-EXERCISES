@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba17</title>
+</head>
+<body>
+    <div id="mojGraf" style="width: 100%; max-width: 600px; height: 500px;"></div>
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Zadaci', 'Sati po danu'],
+                ['Radim',7],
+                ['Vježbam',2],
+                ['Igram',5],
+                ['Spavam',8],
+                ['Youtube',2]
+            ]);
+
+            var options = {
+                title:'Dnevne aktivnosti'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById("mojGraf"));
+            chart.draw(data, options);
+        }
+    </script>
+</body>
+</html>

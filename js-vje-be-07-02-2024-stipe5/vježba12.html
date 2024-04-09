@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba12</title>
+</head>
+<body>
+    <form>
+        <label>Telefonski broj: </label>
+        <input id="broj" type="tel" pattern="/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/">
+        <button onclick="validate()" type="submit">Pošalji</button>
+        <p id="demo"></p>
+    </form>
+    <script>
+        function validate() {
+            var broj = document.getElementById("broj");
+            console.log(broj.value);
+            if (!broj.checkValidity()) {
+                document.getElementById("demo").innerHTML = broj.validationMessage;
+            }
+        }
+    </script>
+</body>
+</html>

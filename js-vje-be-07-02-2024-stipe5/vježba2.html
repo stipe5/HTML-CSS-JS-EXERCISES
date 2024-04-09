@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nasumicniCitat()">Nasumični citat</button>
+    <div id="citat"></div>
+    <!-- ZADATAK: ISPIŠITE JEDAN NASUMIČNO ODABRAN CICAT PRILIKOM KLIKA NA GUMB -->
+    <!--  ISPIŠITE HTML KOJI JE POTREBAN DA BI OVA SKRIPTA FUNKCIONIRALA   -->
+    <script>
+            //LISTA CITATA -> NADOPUNITI
+            const citati = [
+                {
+                    citat: "Problemi se povećavaju što se bliže približavamo cilju.",
+                    autor: "Johann Wolfgang von Goethe"
+                },
+                {
+                    citat: "Nije svrha novina da odgajaju nego da šokiraju.",
+                    autor: "James Gordon Bennett"
+                },
+            ];
+            /*  */
+            //OVDJE KREIRAJTE FUNKCIJU GUMBA ZA PRIKAZ NASUMIČKONG CITATA IZ OBJEKTA
+            function nasumicniCitat() {
+                var rnum = Math.floor(Math.random() * citati.length);
+                document.getElementById("citat").innerHTML = "Citat: " + citati[rnum].citat + "<br>Autor: " + citati[rnum].autor;
+            }
+    </script>
+</body>
+</html>

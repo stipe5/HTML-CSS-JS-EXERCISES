@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba31</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var x = parseInt(prompt("Unesite prvi broj: "));
+        var y = parseInt(prompt("Unesite drugi broj: "));
+        if (x >= y) {
+            x += 5;
+            y += 5;
+        } else {
+            x -= 5;
+            y -= 5;
+        }
+        document.getElementById("demo").innerHTML = `x = ${x}<br>y = ${y}`;
+    </script>
+</body>
+</html>

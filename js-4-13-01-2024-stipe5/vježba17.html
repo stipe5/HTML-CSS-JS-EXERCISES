@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba17</title>
+</head>
+<body>
+    <div id="vrijeme"></div>
+    <script>
+        var time = new Date();
+        time = time.getHours();
+        var pozdrav;
+        if (time < 10) {
+            pozdrav = "Dobro jutro";
+        } else if (time < 20) {
+            pozdrav = "Dobar dan";
+        } else {
+            pozdrav = "Dobra večer";
+        }
+        document.getElementById("vrijeme").innerHTML = `${time} je sati. ${pozdrav}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba30</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var a = parseInt(prompt("Unesite prvi broj: "));
+        var b = parseInt(prompt("Unesite drugi broj: "));
+        var zbroj = a + b;
+        function getlength (a) {
+            return a.toString().length;
+        }
+        var duljina = getlength(zbroj);
+        var ispis = document.getElementById("demo");
+        if (duljina == 2) {
+            ispis.innerHTML = `Zbroj brojeva ${a} i ${b} je dvoznamenkast broj.`;
+        } else {
+            ispis.innerHTML = `Zbroj brojeva ${a} i ${b} nije dvoznamenkast broj.`;
+        }
+    </script>
+</body>
+</html>

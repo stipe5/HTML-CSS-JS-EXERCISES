@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            width: 700px;
+            height: 700px;
+            position: relative;
+        }
+        .prvi {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            z-index: 10;
+            background-color: red;
+            top: 0%;
+            left: calc(50% - 250px);
+        }
+        .drugi {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            z-index: 11;
+            background-color: blue;
+            top: 100px;
+            left: calc(50% - 350px);
+        }
+        .treci {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            z-index: 12;
+            background-color: green;
+            top: 170px;
+            left: calc(50% - 170px);
+        }
+        .text {
+            margin: 5px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            font-size: 200px;
+            width: 235px;
+            height: 235px;
+            color: white;
+            border: solid 2px white;
+            border-radius: 50%;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba5</title>
+</head>
+<body>
+    <div class="box">
+        <div class="prvi"><div class="text">A</div></div>
+        <div class="drugi"><div class="text">B</div></div>
+        <div class="treci"><div class="text">C</div></div>
+    </div>
+</body>
+</html>

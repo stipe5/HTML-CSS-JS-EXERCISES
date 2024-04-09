@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba27</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var a = prompt("Unesite A: ");
+        var b = prompt("Unesite B: ");
+        var ispis = document.getElementById("demo");
+        var supa;
+        ispis.innerHTML += `A: ${a} <br>B: ${b}<br>`;
+        if (a == 0) {
+            supa = 1;
+        } else if (a == 1) {
+            supa = 0;
+        }
+        ispis.innerHTML += `Negacija A je ${supa}<br>`;
+        ispis.innerHTML += `A i B = ${a && b}<br>`;
+        ispis.innerHTML += `A ili B = ${a || b}<br>`;
+
+    </script>
+</body>
+</html>

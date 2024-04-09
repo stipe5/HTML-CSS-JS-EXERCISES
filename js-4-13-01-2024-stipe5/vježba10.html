@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba10</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Boja: <span class="pas"></span></li>
+            <li>Pasmina: <span class="pas"></span></li>
+            <li>Ime: <span class="pas"></span></li>
+        </ul>
+    </div>
+    <script>
+        let pas = {
+            "boja": "Crna",
+            "pasmina": "Maltezer",
+            "ime": "Bobi"
+        };
+        pas.boja = "Bijela";
+        pas.pasmina = "Labrador";
+        pas.ime = "Max";
+        var infoPas = document.getElementsByClassName("pas");
+        var vrijednostiPas = Object.values(pas);
+        for (i = 0; i < infoPas.length; i++) {
+            infoPas[i].innerHTML = vrijednostiPas[i];
+        }
+    </script>
+</body>
+</html>

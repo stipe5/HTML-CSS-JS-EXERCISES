@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pretrazivanje niza</title>
+</head>
+<body>
+    <script>
+        var brojevi = [5, 2, 15, 74, 125];
+        function pretraziNiz(niz, provjera) {
+            return niz.includes(provjera);
+        }
+        if (pretraziNiz(brojevi, 125)) {
+            console.log("sadrzi broj");
+        } else {
+            console.log("ne sadrzi broj");
+        }
+    </script>
+</body>
+</html>

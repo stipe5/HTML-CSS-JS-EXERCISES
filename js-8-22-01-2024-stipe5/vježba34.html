@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba34</title>
+</head>
+<body>
+    <p>Brojač: <output id="result"></output></p>
+    <button onclick="startWorker()">Pokreni Worker</button>
+    <button onclick="stopWorker()">Zaustavi Worker</button>
+
+    <script>
+        let w;
+
+        function startWorker() {
+            if (typeof (w) == "undefined") {
+                w = new Worker("worker.js");
+            }
+            w.onmessage = function (event) {
+                document.getElementById("result").innerHTML = event.data;
+            };
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
+</html>

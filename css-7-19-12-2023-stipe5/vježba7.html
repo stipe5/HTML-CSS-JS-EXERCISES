@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #container {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            background-color: lightseagreen;
+        }
+        .box {
+            display: flex;
+            width: 25%;
+            margin: 15px;
+        }
+        .box1 {
+            padding: 15px;
+            color: white;
+            background-color: red;
+        }
+        .box2 {
+            padding: 15px;
+            color: white;
+            background-color: green;
+        }
+        .box3 {
+            padding: 15px;
+            color: white;
+            background-color: orange;
+        }
+        .con1 {
+            flex-direction: row;
+        }
+        .con2 {
+            flex-direction: row-reverse;
+        }
+        .con3 {
+            flex-direction: column;
+        }
+        .con4 {
+            flex-direction: column-reverse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba7</title>
+</head>
+<body>
+    <section id="container">
+        <div class="box con1">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </div>
+        <div class="box con2">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </div>
+        <div class="box con3">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </div>
+        <div class="box con4">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+        </div>
+    </section>
+</body>
+</html>

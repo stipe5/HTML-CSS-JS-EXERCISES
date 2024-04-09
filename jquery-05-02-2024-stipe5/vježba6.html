@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba6</title>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("p").append(" <b>Newly added appended text</b>.");
+            });
+            $("#btn2").click(function() {
+                $("ol").append("<li><b>Newly added appended item</b></li>");
+            });
+            $("#btn3").click(function() {
+                $("div").append("<img src=https://blog.fillyourplate.org/wp-content/uploads/2015/07/bigstock-Head-of-funny-cow-looking-to-a-48484160-418x512.jpg>")
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+    <ol>
+        <li>Item no 1</li>
+        <li>Item no 2</li>
+        <li>Item no 3</li>
+    </ol>
+    <div></div>
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append item</button>
+    <button id="btn3">Append picture</button>
+</body>
+</html>

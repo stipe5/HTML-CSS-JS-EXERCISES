@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba18</title>
+</head>
+<body>
+    <h1>Fetching data from SWAPI</h1>
+    <h2>Dohvati podatke o svom omiljenom heroju</h2>
+    <select name="" id="people" onchange="urlChange()">Heroji</select>
+    <hr>
+
+    <div id="output">
+     
+        <h2>Name: <span class="name">Name</span></h2>
+        <p>DOB: <span class="dob">Birth</span></p>
+        <p>Height: <span class="height">Height</span>cm</p>
+        <p>Mass: <span class="mass">Mass</span>kg</p>
+        <p>Eye color: <span class="eye_color"></span></p>
+         <!-- dodajte visinu, težinu , boju očiju-->
+        <p>His movies:</p>
+        <ul id="movieList"></ul>
+        <p>His vehicles:</p>
+        <ul id="vozilaList"></ul>
+        <!-- Dodajte vozila -->
+    </div>
+    <script>
+        const output = document.querySelector('#output');
+        const name = document.querySelector('.name');
+        const dob = document.querySelector('.dob');
+        const height = document.querySelector('.height');
+        const mass = document.querySelector('.mass');
+        const eyeColor = document.querySelector('.eye_color');
+        const ul = document.querySelector('#movieList');
+        const ulVozila = document.querySelector('#vozilaList');
+        const selectHeroj = document.querySelector("#people"); 
+        const URL = `https://swapi.dev/api/people/1`;
+        
+        fetchPeople();
+        loadCharacter(URL);
+
+        async function loadCharacter(url) {
+            const fetchPromise = await fetch(url);
+            const data = await fetchPromise.json();
+            name.innerHTML = data.name;
+            dob.innerHTML = data.birth_year;
+            height.innerHTML = data.height;
+            mass.innerHTML = data.mass;
+            eyeColor.innerHTML = data.eye_color;
+            const films = listOfFilms(data.films);
+            const vehicles = listOfVehicles(data.vehicles);
+            /* DODAJTE VOZILA */
+        }
+        
+        /* LISTA FILMOVA */
+        async function listOfFilms(films) {
+            console.log(films);
+            for (const film of films) {
+                const fetchMovie = await fetch(film);
+                const movie = await fetchMovie.json();
+                let li = document.createElement('li');
+                li.innerHTML = movie.title;
+                ul.appendChild(li);
+            }
+        }
+
+        async function listOfVehicles(vehicles) {
+            console.log(vehicles);
+            for (const vehicle of vehicles) {
+                const fetchVehicle = await fetch(vehicle);
+                const vozilo = await fetchVehicle.json();
+                let li = document.createElement("li");
+                li.innerHTML = vozilo.name;
+                ulVozila.appendChild(li);
+            }
+        }
+        async function fetchPeople() {
+            for (i = 1; i < 84; i++) {
+                let response = await fetch(`https://swapi.dev/api/people/${i}`);
+                const name = await response.json();
+                let option = document.createElement("option");
+                option.innerHTML = name.name;
+                option.value = name.url;
+                selectHeroj.appendChild(option);
+            }
+            
+        }
+        selectHeroj.addEventListener('change', function() {
+            ulVozila.innerHTML = "";
+            ul.innerHTML = "";
+            const selectedHero = this.value
+            loadCharacter(selectedHero);
+        })
+         /* DODAJTE FUNKCIJU ZA  VOZILA */
+         /* DOHVATITE LISTU VOZILA, (Pronađite ID korisnika koji ima vozila) */
+    </script>
+</body>
+</html>

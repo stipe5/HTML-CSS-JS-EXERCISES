@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root {
+            --glavna-boja: purple;
+        }
+        .custom-form {
+            accent-color: var(--glavna-boja, green)
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba5</title>
+</head>
+<body>
+    <form class="custom-form" action="" method="get">
+        <label for="">Da li se slažete?</label>
+        <br>
+        <input type="radio" name="upit" value="da">
+        <label for="upit">Da</label>
+        <input type="radio" name="upit" value="ne">
+        <label for="upit">Ne</label>
+        <br>
+        <label for="pice">Odaberite piće</label>
+        <br>
+        <input type="checkbox" name="pice" value="cola">
+        <label for="pice">Cola</label>
+        <input type="checkbox" name="pice" value="fanta">
+        <label for="pice">Fanta</label>
+
+    </form>
+</body>
+</html>

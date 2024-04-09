@@ -1,0 +1,15 @@
+body {
+    font-size: 20px;
+    kerning: 0.5em;
+    background-color: red;
+    color: greenyellow;
+}
+a {
+    color: yellow;
+}
+a:hover {
+    color: lightyellow;
+}
+p {
+    line-height: 1em;
+}

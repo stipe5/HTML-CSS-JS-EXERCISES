@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba24</title>
+</head>
+<body>
+    <div id="prihvaceni"></div>
+    <div id="odbaceni"></div>
+    <script>
+        var array = [];
+        var number = 0;
+        var odbaceni = [];
+        var result1 = document.getElementById("prihvaceni");
+        var result2 = document.getElementById("odbaceni");
+        while (array.length < 5) {
+            number = Number(prompt("Unesite dvoznamenkasti broj"));
+            if (numberDigits(number) == 2 && nemaDuplikat(number)) {
+                array.push(number);
+            } else {
+                odbaceni.push(number);
+            }
+        }
+    function numberDigits (number) {
+        return number.toString().length;
+    }
+    function nemaDuplikat (number) {
+        var check = 0;
+        for (i = 0; i < array.length; i++) {
+            if (number == array[i]) {
+                check++;
+            }
+        }
+        if (check == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    result1.innerHTML = array;
+    result2.innerHTML = odbaceni;
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba9</title>
+    <script>
+        
+        function fun() {
+                $("#div1").find("p").css({
+                    "color": "blue",
+                    "border": "6px dashed blue"
+                });
+            };
+    </script>
+</head>
+<body>
+    <button onclick="fun()">Oboji</button>
+    <div id="div1">
+        <p>Mene ce obojati</p>
+    </div>
+    <p>Mene nece obojati</p>
+</body>
+</html>

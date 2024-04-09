@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba12</title>
+</head>
+<body>
+    <input type="text" name="naziv" id="naziv">
+    <input type="text" name="email" id="email">
+    <input type="text" name="smjer" id="smjer">
+    <button onclick="setCookie()">postavi</button>
+    <button onclick="getCookie()">dohvati</button>
+    <div id="ispis"></div>
+    <script>
+        function setCookie() {
+            var naziv = document.getElementById("naziv").value;
+            var email = document.getElementById("email").value;
+            var smjer = document.getElementById("smjer").value;
+            document.cookie = "naziv=" + naziv;
+            document.cookie = "email=" + email;
+            document.cookie = "smjer="+ smjer;
+        }
+        function getCookie() {
+            if (document.cookie.length != 0) {
+                var array = document.cookie.split(";");
+                for (let i = 0; i < array.length; i++) {
+                    document.getElementById("ispis").innerHTML += array[i] + "<br>";
+                }
+            } else {
+                alert("Cookie nije dostupan");
+            }  
+        }
+    </script>
+</body>
+</html>

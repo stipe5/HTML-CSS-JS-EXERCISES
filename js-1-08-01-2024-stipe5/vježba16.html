@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba16</title>
+</head>
+<body>
+    <div id="zbroj"></div>
+    <script>
+        let a = parseInt(prompt("Unesite prvi broj:"));
+        let b = parseInt(prompt("Unesite drugi broj:"));
+        console.log(a);
+        let c = a + b;
+        if (isNaN(c) ) {
+            document.getElementById("zbroj").innerHTML = "Niste unijeli broj/eve"
+        } else {
+            document.getElementById("zbroj").innerHTML = `Rezultat sume ${a} i ${b} je ${c}!`;
+        }
+    </script>
+</body>
+</html>

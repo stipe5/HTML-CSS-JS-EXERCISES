@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba23</title>
+</head>
+<body>
+    <script>
+        var x = parseInt(prompt("Unesite X koordinatu: "));
+        var y = parseInt(prompt("Unesite Y koordinatu: "));
+        var kvadrant;
+        if (Math.sign(x) == 1 && Math.sign(y) == 1) {
+            console.log (`točka ${x} i ${y} nalazi se u 1. kvadrantu`)
+        } else if (Math.sign(x) == -1 && Math.sign(y) == 1) {
+            console.log (`točka ${x} i ${y} nalazi se u 2. kvadrantu`)
+        } else if (Math.sign(x) == -1 && Math.sign(y) == -1) {
+            console.log (`točka ${x} i ${y} nalazi se u 3. kvadrantu`)
+        } else {
+            console.log (`točka ${x} i ${y} nalazi se u 4. kvadrantu`)
+        }
+    </script>
+</body>
+</html>

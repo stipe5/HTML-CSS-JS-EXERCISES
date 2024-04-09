@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <table id="navtable">
+                <tr>
+                    <td>
+                        <div class="logo">
+                            <img src="images/logo.webp" alt="HeadShot Esports portal">
+                        </div>
+                    </td>
+                    <td class="headerspacer"></td>
+                    <td>
+                        <div class="navlist">
+                            <ul>
+                                <li><a href="index.html" target="_self" title="Naslovna">Naslovna</a></li>
+                                <li><a href="about.html" target="_self" title="O nama">O nama</a></li>
+                                <li><a href="services.html" target="_self" title="Usluge">Usluge</a></li>
+                                <li><a href="contact.html" target="_self" title="Kontakt">Kontakt</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="headerspacer"></td>
+                    <td>
+                        <div class="search">
+                            <form>
+                                <input type="search" name="search" placeholder="Search">
+                                <button type="button"><img src="images/search.svg" alt="search"></button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+    <main id="main-contact">
+        <table id="kontakttable">
+            <tr>
+                <td rowspan="2">
+                    <form id="kontaktforma" action="hvala-vam.html" method="get">
+                        <label for="imeprezime">Ime i prezime:</label><br>
+                        <input type="text" name="imeprezime" id="imeprezime" placeholder="Unesite ime i prezime" maxlength="100" required><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" id="email" placeholder="Unesite svoju e-mail adresu" required><br>
+                        <label for="poruka">Poruka:</label><br>
+                        <textarea name="poruka" id="poruka" cols="26" rows="10" maxlength="400" minlength="50" placeholder="Poruka može imati najviše 400 znakova" required></textarea><br>
+                        <button type="submit">Pošalji</button>
+                        <button type="reset">Reset</button>
+                    </form>
+                </td>
+                <td>
+                    <img src="images/logo.webp" alt="logo" width="60%" height="60%">
+                    <table id="kontaktinfo">
+                        <h1>Kontakt informacije</h1> 
+                        <tr>
+                            <td>Kontakt osoba:</td>
+                            <td>Matko Plejić, Chief of Gaming Operations</td>
+                        </tr>
+                        <tr>
+                            <td>OIB:</td>
+                            <td>05084068182</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><a href="mailto:matko.plejic@headshot.hr">matko.plejic@headshot.hr</a></td>
+                        </tr>
+                        <tr>
+                            <td>Telefon:</td>
+                            <td><a href="tel:+385958462795">+385 95 846 2795</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="socials">
+                        <ul>
+                            <li><a href="#" target="_blank" title="Facebook"><img class="kontakt-socials" id="facebook" src="images/facebook.svg" alt="Facebook"></a></li>
+                            <li><a href="#" target="_blank" title="Instagram"><img class="kontakt-socials" id="instagram" src="images/instagram.svg" alt="Instagram"></a></li>
+                            <li><a href="#" target="_blank" title="Twitter"><img class="kontakt-socials" id="twitter" src="images/twitter.svg" alt="Twitter"></a></li>
+                        </ul>
+                        <p>Pratite nas na društvenim mrežama!</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <div class="socials">
+            <ul>
+                <li><a href="#" target="_blank" title="Facebook"><img class="social-icon" id="facebook" src="images/facebook.svg" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank" title="Instagram"><img class="social-icon" id="instagram" src="images/instagram.svg" alt="Instagram"></a></li>
+                <li><a href="#" target="_blank" title="Twitter"><img class="social-icon" id="twitter" src="images/twitter.svg" alt="Twitter"></a></li>
+            </ul>
+            <p>Pratite nas na društvenim mrežama!</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba27</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var prices = ["Kn 1.00", "Kn 1.85", "Kn 19.99"];
+        var sum = 0;
+        for (i=0; i < prices.length; i++) {
+            sum += Number(prices[i].slice(3));
+        }
+        document.getElementById("result").innerHTML = `Ukupan iznos koji treba platiti: ${sum} Kn`;
+    </script>
+</body>
+</html>

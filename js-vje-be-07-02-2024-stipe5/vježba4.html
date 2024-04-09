@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba4</title>
+</head>
+<body>
+    <h1>Države</h1>
+  <div id="drzava"></div>
+
+
+  <!-- PREUZMITE LISTU DRŽAVA NA SVOJE RAČUNALO -->
+  <!-- https://github.com/achingachris/fetch-api-demo/blob/dev/countries.json -->
+
+
+  <!-- UZ POMOĆ FETCH DOHVATITE DRŽAVE I PRIKAŽITE IH U SVOM DOKUMENTU -->
+  <!-- https://chrisdevcode.hashnode.dev/how-to-display-json-on-an-html-page-using-vanilla-javascript -->
+
+  <script>
+    function dohvatiDrzave() {
+        fetch('https://raw.githubusercontent.com/achingachris/fetch-api-demo/dev/countries.json')
+        .then((res) => res.json())
+        .then((data) => {
+      console.log(data)
+      let output = "Države";
+      data.forEach(function (item) {
+        output += `
+        <ul>
+          <li>Država: ${item.Country}</li>
+          <li>KOD: ${item.ISO2}</li>
+        </ul>
+      `
+      })
+      document.getElementById('drzava').innerHTML = output
+    })
+    .catch((error) => {
+      console.log(`Error Fetching data : ${error}`)
+      document.getElementById('country').innerHTML = 'Error Loading Data'
+    })
+    }
+    dohvatiDrzave();
+    /* NA NOVI DOKUMENT DODATI PRAZNU SELECT LISTU TE NJU POPUNITI SA DRŽAVAMA, NEKA SE LISTA NAPUNI KADA SE STISNE BUTTON, LISTU SORTIRAJTE ABECEDNO*/
+    
+  </script>
+</body>
+</html>

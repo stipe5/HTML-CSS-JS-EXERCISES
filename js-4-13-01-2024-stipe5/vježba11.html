@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba11</title>
+</head>
+<body>
+    <div>1. a = 4, x = 12. provjeri je li jedan od ove 2 varijable 4.<br> <span id="prvi"></span>
+    </div>
+    <div>
+        2. b = 6, z = trokut. Jesu li b i z jednaki trokut?<br> <span id="drugi"></span>
+    </div>
+    <div>
+        3. c = 4, x = 12, c nije 5 a x je 12 provjeri<br> <span id="treci"></span>
+    </div>
+    <script>
+        var a = 4;
+        var b = 6;
+        var c = 4;
+        var x = 12;
+        var z = "trokut";
+        if (a == 4 || x == 4) {
+            document.getElementById("prvi").innerHTML = "Jedan od njih je 4, ova tvrdnja je istinita";
+        }
+        if (b == "trokut" && z == "trokut") {
+            document.getElementById("drugi").innerHTML = "Ova tvrdnja je točna";
+        } else {
+            document.getElementById("drugi").innerHTML = `${b} nije jednako ${z}.`;
+        }
+        if (c != 5 || x == 12) {
+            document.getElementById("treci").innerHTML = "Ova tvrdnja je točna";
+        } else {
+            document.getElementById("treci").innerHTML = "Tvrdnja nije točna. Jedan od uvjeta nije ispunjen.";
+        }
+    </script>
+</body>
+</html>

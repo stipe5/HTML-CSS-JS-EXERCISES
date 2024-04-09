@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .box {
+            width: 100%;
+            height: 80vh;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: white;
+        }
+        .box3 {
+            background-color: blue;
+        }
+        .box4 {
+            background-color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vježba36</title>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3" id="mojWaypoint"></div>
+    <div class="box box4"></div>
+    <script>
+        var waypoint = new Waypoint({
+        element: document.getElementById('mojWaypoint'),
+        handler: function(direction) {vj
+            alert('Basic waypoint triggered')
+  }
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba6</title>
+</head>
+<body>
+    <button type="button" onclick="getSite()">zamijeni sadrzaj</button>
+    <div id="demo"></div>
+    <script>
+        function getSite() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "vježba6-2.html");
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba34</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        do {
+            var unos = +prompt("Unesite broj:");
+        } while (unos > 10 || unos < 1);
+        if (isNaN(unos)) {
+            document.getElementById("demo").innerHTML = "Neispravna vrijednost";
+        }
+
+        for ( var i = 0; i < unos; i++) {
+            document.getElementById("demo").innerHTML += ".";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>danitjedna</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var datum = new Date();
+        var display = document.getElementById("demo");
+        console.log(datum.getDay());
+        
+        switch (datum.getDay()) {
+            case 1: 
+                display.innerHTML = "Ponedjeljak";
+                break;
+            case 2: 
+                display.innerHTML = "Utorak";
+                break;
+            case 3: 
+                display.innerHTML = "Srijeda";
+                break;
+            case 4: 
+                display.innerHTML = "Četvrtak";
+                break; 
+            case 5: 
+                display.innerHTML = "Petak";
+                break; 
+            case 6: 
+                display.innerHTML = "Subota";
+                break;
+            case 7: 
+                display.innerHTML = "Nedjelja";
+                break;
+        }
+    </script>
+</body>
+</html>

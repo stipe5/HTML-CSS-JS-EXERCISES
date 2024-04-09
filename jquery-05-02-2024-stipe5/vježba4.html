@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba4</title>
+</head>
+<body>
+    <select name="select" id="sel">
+        <option>Osijek</option>
+        <option selected="selected">Split</option>
+        <option>Šibenik</option>
+    </select>
+    <div id="loc"></div>
+    <script>
+        $("select").change(function () {
+            document.getElementById("loc").innerHTML = "You selected " + document.getElementById("sel").value;
+        })
+    </script>
+    
+</body>
+</html>

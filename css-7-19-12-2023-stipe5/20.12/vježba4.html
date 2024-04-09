@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba4</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .container div {
+            background-color: white;
+            box-shadow: 2px 2px 5px;
+            padding: 15px 20px;
+            transition: all 200ms linear;
+            margin: 10px;
+        }
+        .container div:hover {
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+        }
+        .container div[data-status="active"] {
+            background-color: cadetblue;
+            color: white;
+            box-shadow: 2px 2px 5px;
+            padding: 15px 20px;
+            transition: all 200ms linear;
+            margin: 10px;
+        }
+        .container div[data-status="disabled"] {
+            background-color: rgb(198, 196, 196);
+        }
+        .container div[data-status="disabled"]:hover {
+            background-color: rgb(198, 196, 196);
+            color: black;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div data-status="disabled"><i class="fa-solid fa-angles-left"></i></div>
+        <div data-status="active">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div><i class="fa-solid fa-angles-right"></i></div>
+    </section>
+</body>
+</html>

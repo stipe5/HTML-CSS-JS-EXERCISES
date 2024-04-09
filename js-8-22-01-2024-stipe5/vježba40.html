@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba40</title>
+</head>
+<body>
+    <script>
+        let gradovi = [
+            {name: "Šibenik", population: 3792621},
+            {name: "Zadar", population: 8175133},
+            {name: "Zagreb", population: 2695598},
+            {name: "Osijek", population: 2099451},
+            {name: "Donja Mala", population: 15}   
+        ];
+        let velikiGradovi = gradovi.filter(function (e) {
+            return e.population > 3000000;
+        });
+        console.log(velikiGradovi);
+
+        let velikiGradovi2 = gradovi.filter(name => name.population > 3000000);
+        console.log(velikiGradovi2);
+    </script>
+</body>
+</html>

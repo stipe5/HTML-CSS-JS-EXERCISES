@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            display: flex;
+            padding: 15px;
+            background-color: gray;
+            height: 30vh;
+        }
+        .container1 {
+            justify-content: flex-end;
+        }
+        .container2 {
+            justify-content: center;
+        }
+        .container3 {
+            align-items: stretch;
+            height: 400px;
+        }
+        .container2 .box {
+            align-items: center;
+        }
+        .container3 .box:last-child {
+            align-self: end;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <section class="container container1">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </section>
+    <section class="container container2">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </section>
+    <section class="container container3">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </section>
+</body>
+</html>

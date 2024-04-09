@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba1</title>
+</head>
+<body>
+    <div>
+        <input style="margin-bottom: 1rem;" type="file" id="fileinput" multiple><br>
+        <button onclick="getRandomFileName()">Dohvati nasumičan file</button>
+    </div>
+    <h1 id="printFile"></h1>
+    <script>
+        let fileNames = [];
+        let upload = document.getElementById("fileinput");
+        $("#fileinput").change(function () {
+            var fileList = upload.files;
+            for (let i = 0; i < fileList.length; i++) {
+                fileNames.push(fileList[i].name);
+            }
+        })
+        function getRandomFileName() {
+            if (fileNames.length > 0) {
+                const randomFileName = fileNames[Math.floor(Math.random() * fileNames.length)];
+                document.getElementById('printFile').innerHTML = randomFileName;
+                console.log("Random file name:", randomFileName);
+            } else {
+                console.log("No files have been uploaded.");
+            }
+        }
+    </script>
+</body>
+</html>

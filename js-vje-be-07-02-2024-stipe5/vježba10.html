@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba10</title>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+    <label for="">1. broj: </label>
+    <input id="broj1" type="number"><br><br>
+    <label for="">2. broj: </label>
+    <input id="broj2" type="number"><br><br>
+    <label for="vrsta">Operacija</label>
+    <select name="vrsta" id="vrsta">
+        <option value="zbroji">Zbroji</option>
+        <option value="oduzmi">Oduzmi</option>
+        <option value="mnozi">Pomnoži</option>
+        <option value="podijeli">Podijeli</option>
+    </select>
+    <button onclick="operacija()">Rezultat</button>
+    <p id="rezultat"></p>
+    <script>
+        var result = document.getElementById("rezultat");
+        function operacija() {
+            let a = Number(document.getElementById("broj1").value);
+            let b = Number(document.getElementById("broj2").value);
+            let operacija = document.getElementById("vrsta").value;
+            switch(operacija) {
+                case "zbroji":
+                    result.innerHTML = `Zbroj brojeva ${a} i ${b} je ${a+b}`;
+                    break;
+                case "oduzmi":
+                    result.innerHTML = `Razlika brojeva ${a} i ${b} je ${a-b}`;
+                    break;
+                case "mnozi":
+                    result.innerHTML = `Umnožak brojeva ${a} i ${b} je ${a*b}`;
+                    break;
+                case "podijeli":
+                    result.innerHTML = `Kvocijent brojeva ${a} i ${b} je ${a/b}`;
+            }
+
+        }
+    </script>
+</body>
+</html>

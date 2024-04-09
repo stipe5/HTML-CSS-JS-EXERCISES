@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba8</title>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function () {
+            var slika1 = $("#img1").attr("src");
+            var slika2 = $("#img2").attr("src");
+            $("#img1").attr("src", slika2);
+            $("#img2").attr("src", slika1);
+        });
+        });
+        
+    </script>
+</head>
+<body>
+    <button>Zamijeni sliku</button>
+    <div>
+        <img src="https://cdn.hswstatic.com/gif/Holy-cow.jpg" alt="" id="img1" width="200px" height="200px">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c5ce047d86cc973de4af5ee/1589683281998-23SEJWEYK5V9L6ZQGW68/HolyCow-003.jpg?format=2500w" alt="" id="img2" width="200px" height="200px">
+    </div>
+</body>
+</html>

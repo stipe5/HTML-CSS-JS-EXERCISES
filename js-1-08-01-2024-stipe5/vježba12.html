@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba12</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        console.log(new Date().getDay());
+        var dan;
+
+        switch (new Date().getDay()) {
+            case 0:
+                dan = "Nedjelja";
+                break;
+            case 1:
+                dan = "Ponedjeljak";
+                break;
+            case 2:
+                dan = "Utorak";
+                break;
+            case 3:
+                dan = "Srijeda";
+                break;
+            case 4:
+                dan = "Četvrtak";
+                break;
+            case 5:
+                dan = "Petak";
+                break;
+            case 6:
+                dan = "Subota";
+                break;
+        }
+        document.getElementById("demo").innerHTML = "Danas je " + dan;
+    </script>
+</body>
+</html>

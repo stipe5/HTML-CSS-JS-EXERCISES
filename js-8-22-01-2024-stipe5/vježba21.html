@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba21</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var number;
+        var array = [];
+        var suma = 0;
+        do {
+            number = Number(prompt("Unesite broj:"));
+            array.push(number);
+            suma += number;
+        } while (suma <= 150);
+        console.log(number);
+        console.log(suma);
+        console.log(array);
+        array.sort((a,b) => b - a);
+        document.getElementById("demo").innerHTML = `Vaši brojevi sortirani od najvećeg prema najmanjem su : (${array})`;
+    </script>
+</body>
+</html>

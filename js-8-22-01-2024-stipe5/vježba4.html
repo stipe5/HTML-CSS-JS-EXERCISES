@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba4</title>
+</head>
+<body>
+    <p>Unesite broj između 5 i 10</p>
+    <input type="text" id="demo" onchange="myFunction()">
+    <button type="button" onclick="myFunction()">Test input</button>
+    <p id="errorLogs"></p>
+    <script>
+       function myFunction() {
+        const message = document.getElementById("errorLogs");
+        message.innerHTML = "";
+        let x = document.getElementById("demo").value;
+        try {
+            if (x == "") throw "prazno";
+            if (isNaN(x)) throw "nije broj";
+            x = Number(x);
+            if (x < 5) throw "broj je prenizak";
+            if ( x > 10) throw "broj je previsok";
+        } catch (err) {
+            message.innerHTML = "Unos "+ err;
+        }
+       }
+    </script>
+</body>
+</html>

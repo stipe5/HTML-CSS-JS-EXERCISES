@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root {
+            color: lightpink;
+        }
+        .main-section q:first-child {
+            color: blue;
+        }
+        .main-section q:last-of-type {
+            color: red;
+        }
+        .main-section p:first-of-type {
+            background-color: lightgrey;
+        }
+        .main-section *:nth-child(3) {
+            background-color: lightpink;
+        }
+        .main-section p:last-of-type {
+            font-weight: bold;
+        }
+        .main-section time {
+            font-style: italic;
+        }
+        .main-section p:only-child {
+            background-color: red;
+            color: white;
+        }
+        .main-section:empty {
+            padding: 2rem;
+            background-color: yellow;
+            color: black;
+        }
+        .main-section h4:not(:first-child) {
+            border-bottom: solid 5px black;
+            padding-bottom: 15px;
+            margin: 2em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba14</title>
+</head>
+<body>
+    <section class="main-section">
+        <q>Dodajte mi plavu boju teksta</q>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, obcaecati!</p>
+        <p>ovo je treći element</p>
+        <time>07.02.2022</time>
+        <q>dodajte mi crvenu boju teksta</q>
+        <p>ovo je zadnji p u sectionu</p>
+        <h4>Ovo nije zadnji element</h4>
+        <time>07.02.2022</time>
+    </section>
+    <section class="main-section">
+        <p>Ja sam sam</p>
+    </section>
+    <section class="main-section"></section>
+</body>
+</html>

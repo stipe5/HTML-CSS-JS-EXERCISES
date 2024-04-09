@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba23</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var number = 0;
+        var array = [];
+        var umnozak = 1;
+        var counter = 0;
+        var result = document.getElementById("demo");
+        while (counter < 10) {
+            number = Number(prompt("Unesite pozitivni parni broj:"));
+            if (number % 2 == 0 && Math.sign(number) == 1) {
+                array.push(number);
+                umnozak = number * umnozak;
+            }
+            if (array.length == 5) {break;}
+            console.log(counter);
+            counter++;
+        } 
+        console.log(number);
+        console.log(array);
+        if (array.length == 5) {
+            result.innerHTML = umnozak;
+        } else {
+            result.innerHTML = "doslo je do greske";
+        }
+        
+    </script>
+</body>
+</html>

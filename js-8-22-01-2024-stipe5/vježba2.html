@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <div id="result"></div>
+    <button onclick="clicker()">Klikni me!</button>
+    <button onclick="reset()">Reset!</button>
+    <script>
+        var click = 0;
+        var result = document.getElementById("result");
+        if (localStorage.getItem("brojac") !== null) {
+            click = localStorage.getItem("brojac");
+        }
+        result.innerHTML = "Broj klikova: " + click;
+        function clicker() {
+            click++;
+            localStorage.setItem("brojac", click);
+            result.innerHTML = "Broj klikova: " + click;
+        }
+        function reset() {
+            localStorage.removeItem("brojac");
+            click = 0;
+            result.innerHTML = "Broj klikova: " + click;
+        }
+    </script>
+</body>
+</html>

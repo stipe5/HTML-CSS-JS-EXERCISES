@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba9</title>
+</head>
+<body onload="promini()">
+    <h1>Methods we use to access the DOM elements</h1>
+
+    <h2>ID</h2>
+    <div id="divID" class="redBg">Access me by id using the getElementById()</div>
+
+    <h2>Class</h2>
+    <div class="firstClass paleBg">Access me by class name firstClass (1)</div>
+    <div class="firstClass paleBg">Access me by class name firstClass (2)</div>
+
+    <h2>Tag</h2>
+    <p class="spanClass tealBg"><span>Access me by the tag name-span (1)</span></p>
+    <p class="spanClass tealBg"><span>Access me by the tag name-span (2)</span></p>
+
+    <h2>Query Selector</h2>
+    <div id="singleID" class="slateBg">Access me by single query selector</div>
+
+    <h2>Query Selecor All</h2>
+    <div class="queryAll salmonBg">Access me by query all class name (1)</div>
+    <div class="queryAll salmonBg">Access me by query all class name (2)</div>
+
+    <script>
+        function promini() {
+            document.getElementById("divID").style = "background-color: red";
+            var klase = document.getElementsByClassName("firstClass");
+            for (i = 0; i < klase.length; i++) {
+                klase[i].style = "background-color: palegoldenrod";
+            }
+            var spanovi = document.getElementsByTagName("span");
+            for (i = 0; i < spanovi.length; i++) {
+                spanovi[i].style = "background-color: teal";
+            }
+            var query = document.querySelector("#singleID");
+            query.style = "background-color: slateblue";
+            var queryAll = document.querySelectorAll(".queryAll");
+            for (i = 0; i < queryAll.length; i++) {
+                queryAll[i].style = "background-color: salmon";
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dinamicko</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <script>
+        var niz = ["Ante", "Planina", "Hunt", "Alen", "Mislav"];
+        var lista = document.getElementById("list");
+        for (i = 0; i < niz.length; i++) {
+            var lister = document.createElement("li");
+            lister.innerHTML = niz[i];
+            lista.appendChild(lister);
+        }
+    </script>
+</body>
+</html>

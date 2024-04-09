@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba14</title>
+</head>
+<body>
+    <h1>Promise primjer sa Fetch API</h1>
+    <div id="data"></div>
+    <script>
+        const url = "https://jsonplaceholder.typicode.com/posts/1";
+        function fetchData (url) {
+            return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.error("There has been a problem with your fetch operation:", error);
+                throw error;
+            });
+        }
+        fetchData(url)
+        .then(data => {
+            document.getElementById("data").innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            console.log(data);
+        })
+        .catch(error => {
+            document.getElementById("data").innerHTML = `Error: ${error.message}`;
+            console.error("Error fetching data:", error);
+        })
+        .finally(() => {
+            console.log("Fetch operation finished."); 
+        });
+    </script>
+</body>
+</html>

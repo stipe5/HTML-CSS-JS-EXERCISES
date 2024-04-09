@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba6</title>
+</head>
+<body>
+    <label for="">Sati:</label>
+    <select name="Sati" id="listaSata"></select>
+    <label for="">Minute:</label>
+    <select name="Minute" id="listaMinute"></select>
+    <script>
+        let select = document.getElementById("listaMinute");
+        let selectHour = document.getElementById("listaSata");
+        let odaberiteSat = "Odaberite sat...";
+        let porukaZaKlijenta = "Odaberite minute...";
+        optionSat = document.createElement("option");
+        optionSat.innerHTML = odaberiteSat;
+        selectHour.appendChild(optionSat);
+
+        optionMinute = document.createElement("option");
+        optionMinute.innerHTML = porukaZaKlijenta;
+        select.appendChild(optionMinute);
+
+        for (i = 0; i < 24; i++) {
+            var sat = document.createElement("option");
+            sat.innerHTML = i;
+            selectHour.appendChild(sat);
+        }
+
+        for (i = 0; i < 60; i++) {
+            var minute = document.createElement("option");
+            minute.innerHTML = i;
+            select.appendChild(minute);
+        }
+
+        
+    </script>
+</body>
+</html>

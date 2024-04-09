@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #gamewindow {
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba29</title>
+</head>
+<body>
+    <div id="register">
+        <label for="player1">Player1: </label>
+        <input type="text" name="player1" id="player1"><br>
+        <label for="player2">Player2: </label>
+        <input type="text" name="player2" id="player2"><br>
+        <button onclick="registerPlayers()">Registriraj igrače</button><br><br>
+    </div>
+    <div id="gamewindow">
+        <div id="game">Trenutno je na redu: <span id="playerTurn"></span></div>
+        <button id="generate" onclick="generateThrow()">Baci kocku</button>
+        <button id="pobjednik" onclick="checkWinner()">Provjeri pobjednika</button>
+        <div id="winresult"></div>
+    </div>
+    <script>
+        var player1 = "";
+        var player2 = "";
+        var player1value;
+        var player2value;
+        var current = document.getElementById("playerTurn"); 
+        var potez = 0;
+        function registerPlayers() {
+            player1 = document.getElementById("player1").value;
+            player2 = document.getElementById("player2").value;
+            if (player1 != "" || player2 != "") {
+                current.innerHTML = player1;
+                document.getElementById("gamewindow").style.display = "block";
+                document.getElementById("register").style.display = "none";
+            }
+        }
+        function generateThrow() {
+            if (player1 == "" || player2 == "") {
+                alert("Unesite ime igrača prvo");
+                return
+            }
+            if (potez == 0){
+                player1value = Math.floor(Math.random() * 6) + 1;
+                potez++;
+                current.innerHTML = player2;
+                console.log(player1value);
+                
+            } else {
+                player2value = Math.floor(Math.random() * 6) + 1;
+                potez++;
+                current.innerHTML = player1;
+                console.log(player2value);
+            }
+           
+        }
+        function checkWinner() {
+
+            if (player1value > player2value) {
+                document.getElementById("winresult").innerHTML = `${player1} je pobjednik!`
+            } else if (player1value < player2value) {
+                document.getElementById("winresult").innerHTML = `${player2} je pobjednik!`
+            } else {
+                document.getElementById("winresult").innerHTML = `DRAW`;
+            }
+        }
+    </script>
+</body>
+</html>

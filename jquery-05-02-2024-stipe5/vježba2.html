@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba2</title>
+</head>
+<body>
+    <input type="text" value="some text">
+    <p></p>
+    <script>
+        $("input")
+        .keyup(function() {
+            var value = $(this).val();
+            $("p").text( value );
+        })
+        .keyup();
+    </script>
+</body>
+</html>

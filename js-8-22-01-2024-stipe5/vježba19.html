@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba19</title>
+</head>
+<body>
+    <h1>Autori</h1>
+    <ul id="autori"></ul>
+
+    <script>
+        const ul = document.getElementById("autori");
+        const url = "https://jsonplaceholder.typicode.com/users/";
+
+        fetch(url).then((response) => {
+            return response.json();
+        }).then((json) => {
+            json.map(function (author) {
+                let li = document.createElement("li");
+                let name = document.createElement("h2");
+                let email = document.createElement("span");
+
+                name.innerHTML = author.name;
+                email.innerHTML = author.email;
+                li.appendChild(name);
+                li.appendChild(email);
+                ul.appendChild(li);
+            });
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    </script>
+</body>
+</html>

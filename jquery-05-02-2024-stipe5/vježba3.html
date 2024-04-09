@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba3</title>
+</head>
+<body>
+    <div>
+        <button>Feed</button>
+        <button>The</button>
+        <button>Input</button>
+    </div>
+    <input type="text" value="click a button">
+    <script>
+        $("button").click(function() {
+            var text = $(this).text();
+            $("input").val(text);
+        });
+    </script>
+</body>
+</html>

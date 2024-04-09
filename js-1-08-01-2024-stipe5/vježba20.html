@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba20</title>
+</head>
+<body>
+        <label for="num1">Prvi broj:</label><br>
+        <input type="text" name="prvibroj" id="num1"><br>
+        <label for="num2">Drugi broj:</label><br>
+        <input type="text" name="drugibroj" id="num2"><br>
+        <button onclick="zbrojiBrojeve()">Zbroji brojeve</button>
+    <p>Rezultat: <span id="zbroj"></span></p>
+    <script>
+        function zbrojiBrojeve() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            a = Number(a);
+            b = Number(b);
+            document.getElementById("zbroj").innerHTML = a + b;
+        }
+    </script>
+</body>
+</html>

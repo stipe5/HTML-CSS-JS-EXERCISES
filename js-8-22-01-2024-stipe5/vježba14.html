@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba14</title>
+</head>
+<body>
+    <button onclick="place()">Klikni</button>
+    <p id="demo"></p>
+    <script>
+        var placa = [3000,4000,3000,5000,3000,2000];
+        function place() {
+            for (let i = 0; i < placa.length; i++) {
+                if (placa[i] > placa[i+1]) {
+                    document.getElementById("demo").innerHTML += placa[i] + " ";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

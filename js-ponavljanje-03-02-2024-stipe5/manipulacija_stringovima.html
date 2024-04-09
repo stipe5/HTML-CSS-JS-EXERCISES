@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manip_string</title>
+</head>
+<body>
+    <script>
+        function stringAugment(string) {
+            augment = string.split(" ");
+            console.log(augment);
+            for ( i = 0; i < augment.length; i++) {
+            augment[i] =  augment[i].charAt(0).toUpperCase() + augment[i].slice(1);
+            }
+            return augment.join(" ");
+        }
+
+        console.log(stringAugment("ovo je neki string"));
+    </script>
+</body>
+</html>

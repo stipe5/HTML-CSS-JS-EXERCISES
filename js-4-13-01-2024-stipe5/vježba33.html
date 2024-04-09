@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba33</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var unos = parseInt(prompt("Unesite broj:"));
+        var pozneg;
+        var parnepar;
+        if (Math.sign(unos) == 1) {
+            pozneg = "pozitivan";
+        } else {
+            pozneg = "negativan";
+        }
+        if (unos % 2 == 0) {
+            parnepar = "paran";
+        } else {
+            parnepar = "neparan";
+        }
+        document.getElementById("demo").innerHTML = `Broj ${unos} je ${pozneg} ${parnepar} broj.`;
+    </script>
+</body>
+</html>

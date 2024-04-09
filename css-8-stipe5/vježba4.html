@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root {
+            --main-color: red;
+            --secondary-color: yellow;
+            --main-font: Ariel, sans-serif;
+            --third-color: green;
+            --fourth-color: #FF689A;
+            --secondary-font: Impact, sans-serif;
+            --Headline-size: 40px;
+        }
+        h1 {
+            color: var(--third-color);
+            font-size: var(--Headline-size, 25px);
+        }
+        .box1 {
+            background-color: var(--fourth-color, blue);
+        }
+        .box1 h1 {
+            font-family: var(--main-font, Helveta, sans-serif);
+        }
+        .box2 h1 {
+            font-family: var(--secondary-font, Ariel, sans-serif);
+        }
+        .box3 h1 {
+            font-family: var(--main-font, Helveta, sans-serif);
+        }
+        .box2 {
+            background-color: var(--secondary-color, purple);
+        }
+        .box3 {
+            background-color: var(--fourth-color, orange);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba4</title>
+</head>
+<body>
+    <div class="box box1">
+        <h1>NASLOV</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia cumque, unde delectus ducimus atque ad quasi omnis excepturi accusantium eligendi.</p>
+    </div>
+    <div class="box box2">
+        <h1>NASLOV</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nihil.</p>
+    </div>
+    <div class="box box3">
+        <h1>NASLOV</h1>
+        <h1>NASLOV OPET</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto harum illo maiores ex odit, numquam atque ad. Atque deserunt illo, ratione similique cupiditate beatae sint incidunt praesentium odio eaque. Excepturi eaque quia totam aliquam, suscipit provident nemo animi dolore illum fugiat fugit, aut ipsam id quis unde minima mollitia minus.</p>
+</html>

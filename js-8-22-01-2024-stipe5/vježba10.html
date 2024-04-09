@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vježba10</title>
+</head>
+<body>
+    <input type="button" value="Postavi cookie" onclick="setCookie()">
+    <input type="button" value="Dohvati cookie" onclick="getCookie()">
+    <script>
+        function setCookie() {
+            document.cookie = "username=Pero Perić";
+        }
+        function getCookie() {
+            if (document.cookie.length != 0) {
+                alert(document.cookie);
+            } else {
+                alert("Cookie nije dostupan");
+            }
+        }
+    </script>
+</body>
+</html>
